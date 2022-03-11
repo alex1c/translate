@@ -1,0 +1,9 @@
+.Top {
+    margin: auto;
+          width: 100%;
+          color: white;
+          font-size: large;
+          text-align: center;
+          background: grey;
+          padding: 10px;
+}
