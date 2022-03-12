@@ -27,20 +27,21 @@ function OutputText(props) {
         "x-rapidapi-host": "deep-translate1.p.rapidapi.com",
         "x-rapidapi-key": "9352ec2060mshbb3c9c44fb8d69bp1c139djsn9bdf0bfb4f0d",
       },
-      data: { q: "Hello World!", source: languageFrom, target: languageTo },
+      data: { q: text, source: languageFrom, target: languageTo },
     };
 
     axios
       .request(options)
       .then(function (response) {
-        console.log(response.data);
+        console.log(response.data['data']['translations']['translatedText']);
+        settextState(response.data['data']['translations']['translatedText']);
         textState2 = response.data;
       })
       .catch(function (error) {
         console.error(error);
       });
     /////
-   // console.log("textState ", textState);
+    console.log("textState2 ", textState2);
 
     let result
 
@@ -51,7 +52,8 @@ function OutputText(props) {
         result = textState[key][key2].translatedText
       }
     } 
-    settextState(result);
+    //settextState(result);
+    console.log('result ',result)
   }
 
   return (

@@ -46,7 +46,7 @@ function SelectLanguage(props) {
       if (val.name == lang) {
         //console.log("val.name ", val);
         val.cl = "";
-        val.name = val.name + ""; //хз но без этого не работало
+        //val.name = val.name + ""; //хз но без этого не работало
 
         if (props.direction == "from") {
           localStorage.setItem("languageFrom", val.language);
