@@ -1,8 +1,6 @@
 //import React from "react";
 import classes from "./SelectLanguage.module.css";
 import { useState, useEffect } from "react";
-//import { useContext } from "react";
-//import TranslateContext from "../../TranslateContext";
 
 var axios = require("axios").default;
 
@@ -20,6 +18,14 @@ function SelectLanguage(props) {
 
   let triggerMap = [];
 
+  //дефолтные значения
+  if (props.direction === "from") {
+    localStorage.setItem("languageFrom", "ru");
+  } else if (props.direction === "to") {
+    localStorage.setItem("languageTo", "en");
+  }
+  localStorage.setItem("text", "Привет мир");
+
   //получаем данные
   useEffect(() => {
     axios
@@ -34,19 +40,14 @@ function SelectLanguage(props) {
       });
   }, []);
 
-  // console.log("appState", appState);
-
-  //обработчик клика по языку
+  //обработчик клика по одному языку
   function handlerLanguageClick(lang) {
-    //console.log("lang", lang);
     const arraywithSelectLanguage = arrayAllLanguagesLocal.map(updateColor);
 
     function updateColor(val) {
       val.cl = "notActive";
       if (val.name === lang) {
-        //console.log("val.name ", val);
         val.cl = "";
-        //val.name = val.name + ""; //хз но без этого не работало
 
         if (props.direction === "from") {
           localStorage.setItem("languageFrom", val.language);
@@ -70,20 +71,15 @@ function SelectLanguage(props) {
     //console.log(appState)
 
     for (var key in appState) {
-      //console.log("key", key + " значение: " + appState[key]);
-
       appState[key].map((t) => arrayAllLanguages.push(t));
       arrayAllLanguages.map((v) => (v.cl = "notActive")); //добавляем класс не активности по умолчанию
     }
-    //setAllLanguages_2(arrayAllLanguages);
+
     triggerMap.push("1");
-    //console.log('arrayAllLanguages',arrayAllLanguages)
-    //test(arrayAllLanguages)
+
     return arrayAllLanguages;
   }
   setAllLanguages();
-
-  //setLanguages(() => arrayAllLanguages)
 
   //после заполнения локального массива переносим его в стейт
   useEffect(() => {
@@ -92,7 +88,6 @@ function SelectLanguage(props) {
       setAllLanguagesLocal(arrayAllLanguages);
     }
 
-    //setAllLanguages()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [triggerMap]); //arrayAllLanguages
   //когда здесь был arrayAllLanguages то шел постоянный ререндеринг. Сделал служебный триггерный массив. Он дергается однократно в конце перебора основного массива

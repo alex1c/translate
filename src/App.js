@@ -20,26 +20,25 @@ function App() {
 
   return (
     <>
-     {/*  //<TranslateContext.Provider value={{a:'5555'}}> */}
-        <Layout>
-          <Top></Top>
-         {/*  <Divider /> */}
-         <br/>
-          <SelectLanguage direction="from" ></SelectLanguage>
-         {/*  <Divider /> */}
-         <br/>
-          <SelectLanguage direction="to"></SelectLanguage>
-           {/*  <Divider /> */}
-         <br/>
-          <InputText placeholder="Print text for translate..."></InputText>
-          
-          {/*  <Divider /> */}
-          <br/>
-          <OutputText placeholder="Result"></OutputText>
-          {/*  <Divider /> */}
-          <br/>
-          <Footer>Footer</Footer>
-        </Layout>
+      {/*  //<TranslateContext.Provider value={{a:'5555'}}> */}
+      <Layout>
+        <Top></Top>
+        {/*  <Divider /> */}
+        <br />
+        <SelectLanguage direction="from"></SelectLanguage>
+        {/*  <Divider /> */}
+        <br />
+        <SelectLanguage direction="to"></SelectLanguage>
+        {/*  <Divider /> */}
+        <br />
+        <InputText placeholder="Print text for translate..."></InputText>
+        {/*  <Divider /> */}
+        <br />
+        <OutputText placeholder="Result"></OutputText>
+        {/*  <Divider /> */}
+        <br />
+        <Footer>Footer</Footer>
+      </Layout>
       {/* </TranslateContext.Provider> */}
     </>
   );
