@@ -23,16 +23,21 @@ function App() {
      {/*  //<TranslateContext.Provider value={{a:'5555'}}> */}
         <Layout>
           <Top></Top>
-          <Divider />
+         {/*  <Divider /> */}
+         <br/>
           <SelectLanguage direction="from" ></SelectLanguage>
-          <Divider />
+         {/*  <Divider /> */}
+         <br/>
           <SelectLanguage direction="to"></SelectLanguage>
-          <Divider />
+           {/*  <Divider /> */}
+         <br/>
           <InputText placeholder="Print text for translate..."></InputText>
           
-          <Divider />
+          {/*  <Divider /> */}
+          <br/>
           <OutputText placeholder="Result"></OutputText>
-          <Divider />
+          {/*  <Divider /> */}
+          <br/>
           <Footer>Footer</Footer>
         </Layout>
       {/* </TranslateContext.Provider> */}

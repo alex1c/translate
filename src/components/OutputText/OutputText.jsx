@@ -41,9 +41,9 @@ function OutputText(props) {
         console.error(error);
       });
     /////
-    console.log("textState2 ", textState2);
+    //console.log("textState2 ", textState2);
 
-    let result
+    /* let result
 
      for (var key in textState2) {
       console.log("key", key + " значение: " + textState2[key]);
@@ -53,7 +53,7 @@ function OutputText(props) {
       }
     } 
     //settextState(result);
-    console.log('result ',result)
+    console.log('result ',result) */
   }
 
   return (

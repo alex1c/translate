@@ -4,20 +4,22 @@
           color: white;
           font-size: large;
           text-align: center;
-          background: grey;
+          background: #23626F;
           padding: 10px;
 }
 
 .oneLanguage{
-    color: blue;
-    padding: 2px;
-    background: #cacfc5;
-    margin: 3px;
+    color: white;
+    font-size: 15px;
+    padding: 3px;
+    background: #489673;
+    margin: 4px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .oneLanguageActive{
-    color: rgb(238, 106, 17);
+    color: #23626F;
     padding: 2px;
     background: #cacfc5;
     margin: 3px;

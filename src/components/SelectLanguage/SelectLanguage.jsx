@@ -109,7 +109,7 @@ function SelectLanguage(props) {
                 : classes.oneLanguageActive
             }
           >
-            {"| " + p.name + " (" + p.language + ") |"}
+            {" " + p.name + " (" + p.language + ") "}
           </div>
         ))}
       </div>
