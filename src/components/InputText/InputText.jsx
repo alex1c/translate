@@ -1,4 +1,4 @@
-import classes from "./InputText.module.css";
+/* import classes from "./InputText.module.css"; */
 
 import { Input } from "antd";
 

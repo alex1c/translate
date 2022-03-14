@@ -1,4 +1,4 @@
-import classes from "./OutputText.module.css";
+/* import classes from "./OutputText.module.css"; */
 import { Input, Button } from "antd";
 import { useState } from "react";
 
@@ -12,10 +12,10 @@ function OutputText(props) {
     const languageTo = localStorage.getItem("languageTo");
     const text = localStorage.getItem("text");
 
-    console.log("languageFrom", languageFrom);
-    console.log("languageTo", languageTo);
-    console.log("text", text);
-    let textState2;
+    //console.log("languageFrom", languageFrom);
+    //console.log("languageTo", languageTo);
+    //console.log("text", text);
+    //let textState2;
     //////
     var axios = require("axios").default;
 
@@ -35,7 +35,7 @@ function OutputText(props) {
       .then(function (response) {
         console.log(response.data['data']['translations']['translatedText']);
         settextState(response.data['data']['translations']['translatedText']);
-        textState2 = response.data;
+        //textState2 = response.data;
       })
       .catch(function (error) {
         console.error(error);

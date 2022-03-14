@@ -4,7 +4,7 @@ import "./App.css";
 import { Layout } from "antd";
 import Top from "./components/Top/Top";
 import SelectLanguage from "./components/SelectLanguage/SelectLanguage";
-import { Divider } from "antd";
+/* import { Divider } from "antd"; */
 import InputText from "./components/InputText/InputText";
 import OutputText from "./components/OutputText/OutputText";
 //import { useState } from "react";
