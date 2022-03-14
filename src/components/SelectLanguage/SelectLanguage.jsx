@@ -73,10 +73,12 @@ function SelectLanguage(props) {
       //console.log("key", key + " значение: " + appState[key]);
 
       appState[key].map((t) => arrayAllLanguages.push(t));
-      arrayAllLanguages.map((v) => (v.cl = "notActive"));
+      arrayAllLanguages.map((v) => (v.cl = "notActive")); //добавляем класс не активности по умолчанию
     }
     //setAllLanguages_2(arrayAllLanguages);
     triggerMap.push("1");
+    //console.log('arrayAllLanguages',arrayAllLanguages)
+    //test(arrayAllLanguages)
     return arrayAllLanguages;
   }
   setAllLanguages();
@@ -91,6 +93,7 @@ function SelectLanguage(props) {
     }
 
     //setAllLanguages()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [triggerMap]); //arrayAllLanguages
   //когда здесь был arrayAllLanguages то шел постоянный ререндеринг. Сделал служебный триггерный массив. Он дергается однократно в конце перебора основного массива
 
