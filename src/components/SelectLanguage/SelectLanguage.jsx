@@ -43,14 +43,14 @@ function SelectLanguage(props) {
 
     function updateColor(val) {
       val.cl = "notActive";
-      if (val.name == lang) {
+      if (val.name === lang) {
         //console.log("val.name ", val);
         val.cl = "";
         //val.name = val.name + ""; //хз но без этого не работало
 
-        if (props.direction == "from") {
+        if (props.direction === "from") {
           localStorage.setItem("languageFrom", val.language);
-        } else if (props.direction == "to") {
+        } else if (props.direction === "to") {
           localStorage.setItem("languageTo", val.language);
         }
       }
@@ -86,7 +86,7 @@ function SelectLanguage(props) {
   //после заполнения локального массива переносим его в стейт
   useEffect(() => {
     //без условия на заполненность код ниже срабатывал постоянно
-    if (arrayAllLanguagesLocal.length == 0) {
+    if (arrayAllLanguagesLocal.length === 0) {
       setAllLanguagesLocal(arrayAllLanguages);
     }
 
@@ -104,7 +104,7 @@ function SelectLanguage(props) {
             id={p.name}
             onClick={(e) => handlerLanguageClick(e.target.id)}
             className={
-              p.cl == "notActive"
+              p.cl === "notActive"
                 ? classes.oneLanguage
                 : classes.oneLanguageActive
             }
